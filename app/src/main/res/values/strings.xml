@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FileManager</string>
+    <string name="str_start">Start</string>
+    <string name="str_stop">Stop</string>
+    <string name="str_back_again_exit">Press back again to exit</string>
+    <string name="top_biggest_files">10 Biggest Files</string>
+    <string name="most_frequent_files">5 Most Frequent File Extensions</string>
+</resources>
