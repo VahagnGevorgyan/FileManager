@@ -46,39 +46,5 @@ public class Utils {
 
     } // end method updateResultUI
 
-    /**
-     * Method for setting progress bar max value
-     * @param context - context of app
-     * @param count - count of max files
-     */
-    public static void setProgressBarMax(final Context context,
-                                      int count) {
-        if(AppGlobals.DEBUG)Logger.i(TAG, ":: Utils.setProgressBarMax : count : " + count);
-
-        Intent intent = new Intent(Utils.UPDATE_SCAN_RESULT);
-        intent.putExtra(AppGlobals.EXTRA_UPDATE_UI_TYPE, UpdateUITypes.SET_PROGRESS_MAX);
-        intent.putExtra(AppGlobals.EXTRA_PROGRESS_MAX, count);
-        context.sendBroadcast(intent);
-
-    } // end method setProgressBarMax
-
-    /**
-     * Method for setting progress bar value
-     * @param context - context of app
-     * @param value - value of index
-     */
-    public static void setProgressBarValue(final Context context,
-                                         int value) {
-        if(AppGlobals.DEBUG)Logger.i(TAG, ":: Utils.setProgressBarValue : value : " + value);
-
-        Intent intent = new Intent(Utils.UPDATE_SCAN_RESULT);
-        intent.putExtra(AppGlobals.EXTRA_UPDATE_UI_TYPE, UpdateUITypes.SET_PROGRESS_VALUE);
-        intent.putExtra(AppGlobals.EXTRA_PROGRESS_VALUE, value);
-        context.sendBroadcast(intent);
-
-    } // end method setProgressBarValue
-
-
-
 
 }

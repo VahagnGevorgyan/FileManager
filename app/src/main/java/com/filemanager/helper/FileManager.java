@@ -71,8 +71,6 @@ public class FileManager {
         if(AppGlobals.DEBUG)Logger.i(TAG, ":: FileManager.scanFiles : scanned_list : " + scanned_list);
         stopped = false;
         File[] fileList = getFileList();
-        // set progress bar max value
-//        Utils.setProgressBarMax(context, fileList.length);
         // scan files
         if(scanned_list.size() < fileList.length) {
             for (int i=0; i<fileList.length; i++) {
@@ -123,7 +121,6 @@ public class FileManager {
                 if(i > count) break;
                 topList.add(scanned_list.get(i));
             }
-//            topList = (ArrayList<FileInfo>) scanned_list.subList(0, count);
         }
         if(AppGlobals.DEBUG)Logger.i(TAG, ":: FileManager.getFileTopList : topList : " + topList);
         return topList;
@@ -155,7 +152,6 @@ public class FileManager {
         filesSize += file.length();
 
         scanned_list.add(fileInfo);
-//        if(AppGlobals.DEBUG)Logger.i(TAG, ":: FileManager.addToScanFiles : scanned_list.size : " + scanned_list.size());
 
         String fileExt = getFileExt(file.getName());
         if(AppGlobals.DEBUG)Logger.i(TAG, ":: FileManager.addToScanFiles : fileExt : " + fileExt);
@@ -167,10 +163,6 @@ public class FileManager {
         } else {
             scanned_extensions.put(fileExt, 1);
         }
-//        scanned_extensions = (HashMap<String, Integer>) sortByComparator(scanned_extensions, false);
-//        if(scanned_list.size() % 17 == 0)
-//            Utils.setProgressBarValue(context, scanned_list.size());
-//        Utils.updateResultUI(context, (ArrayList<FileInfo>) getFirstItems(4));
 
     } // end method addToScanFiles
 

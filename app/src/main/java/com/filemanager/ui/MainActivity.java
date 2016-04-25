@@ -64,29 +64,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewAverageSize = (TextView) findViewById(R.id.textViewAverageSize);
 
         progressBarScanning = (ProgressBar) findViewById(R.id.progressBarScanning);
-//        progressBarScanning.setMax(100);
-//        // Start long running operation in a background thread
-//        new Thread(new Runnable() {
-//            public void run() {
-//                while (progressStatus < 100) {
-//                    progressStatus += 1;
-//                    // Update the progress bar and display the
-//                    //current value in the text view
-//                    handler.post(new Runnable() {
-//                        public void run() {
-//                            progressBarScanning.setProgress(progressStatus);
-//                        }
-//                    });
-//                    try {
-//                        // Sleep for 200 milliseconds.
-//                        //Just to display the progress slowly
-//                        Thread.sleep(200);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        }).start();
 
     }
 
@@ -201,29 +178,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case UpdateUITypes.SET_PROGRESS_MAX:
                 int max_count = (int) intent.getExtras().get(AppGlobals.EXTRA_PROGRESS_MAX);
                 if(AppGlobals.DEBUG)Logger.i(TAG, ":: MainActivity.onReceiveFileScanResult : EXTRA_PROGRESS_MAX : max_count : " + max_count);
-//                progressBarScanning.setMax(max_count);
-//                // Start long running operation in a background thread
-//                new Thread(new Runnable() {
-//                    public void run() {
-//                        while (progressStatus < 100) {
-//                            progressStatus += 1;
-//                            // Update the progress bar and display the
-//                            //current value in the text view
-//                            handler.post(new Runnable() {
-//                                public void run() {
-//                                    progressBarScanning.setProgress(progressStatus);
-//                                }
-//                            });
-//                            try {
-//                                // Sleep for 200 milliseconds.
-//                                //Just to display the progress slowly
-//                                Thread.sleep(200);
-//                            } catch (InterruptedException e) {
-//                                e.printStackTrace();
-//                            }
-//                        }
-//                    }
-//                }).start();
                 break;
             case UpdateUITypes.SET_PROGRESS_VALUE:
                 final int value = (int) intent.getExtras().get(AppGlobals.EXTRA_PROGRESS_VALUE);
